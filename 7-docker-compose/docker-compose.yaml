@@ -1,0 +1,19 @@
+version: "3"
+services:
+    db:
+        image: "postgres:alpine"
+        container_name: pg-test
+        restart: always
+        volumes:
+            - /home/atom/data:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_DB=myDb
+            - POSTGRES_USER=myUser
+            - POSTGRES_PASSWORD=myPassword
+        ports:
+            - 5432:5432
+        networks:
+            - my-pg-network
+networks:
+    my-pg-network:
+        driver: bridge
