@@ -1,4 +1,4 @@
 docker_network_name: my-network
 my_nginx_bolumes:
-    - "{{ ansible_user_dir + '/configs/nginx/default.conf' }}": /etc/nginx/conf.d/default.conf
-    - "{{ ansible_user_dir + '/index.html' }}": /usr/share/nginx/html/index.html
+    - "{{ ansible_user_dir + '/my-nginx/configs/nginx/default.conf' }}:/etc/nginx/conf.d/default.conf"
+    - "{{ ansible_user_dir + '/my-nginx/index.html' }}:/usr/share/nginx/html/index.html"
