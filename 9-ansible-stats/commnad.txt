@@ -1,0 +1,10 @@
+ansible \
+-i hosts.ini \
+-m setup \
+-a "filter={{[ \ 
+	'ansible_all_ipv4_addresses',\
+	'ansible_distribution',\
+	'ansible_distribution_version',\
+	'ansible_hostname',\
+	'ansible_env',]}}" \
+demo
